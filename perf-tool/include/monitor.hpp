@@ -23,6 +23,8 @@
 #ifndef MONITOR_H_
 #define MONITOR_H_
 
+#include <jvmti.h>
+
 JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv,
             JNIEnv* env,
             jthread thread,

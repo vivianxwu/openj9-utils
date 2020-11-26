@@ -19,10 +19,11 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR Apache-2.0 OR GPL-2.0 WITH Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
  *******************************************************************************/
- 
+
 #ifndef agent_Options_H
 #define agent_Options_H
 
+#include <jvmti.h>
 #include "json.hpp"
 
 using json = nlohmann::json;

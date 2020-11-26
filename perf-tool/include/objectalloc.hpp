@@ -23,6 +23,8 @@
 #ifndef OBJECTALLOC_H_
 #define OBJECTALLOC_H_
 
+#include <jvmti.h>
+
 JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
                         JNIEnv* env,
                         jthread thread,

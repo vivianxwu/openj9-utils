@@ -19,10 +19,13 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR Apache-2.0 OR GPL-2.0 WITH Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
  *******************************************************************************/
- 
+
 #ifndef EXCEPTION_H_
 #define EXCEPTION_H_
 
+#include <jvmti.h>
+
+#define EXCEPTION_STACK_TRACE_NUM_FRAMES (5)
 
 JNIEXPORT void JNICALL Exception(jvmtiEnv *jvmtiEnv,
             JNIEnv* jniEnv,
@@ -34,7 +37,6 @@ JNIEXPORT void JNICALL Exception(jvmtiEnv *jvmtiEnv,
             jlocation catch_location);
 
 void setExceptionBackTrace(bool val);
-
 void setExceptionSampleRate(int rate);
 
 #endif /* EXCEPTION_H_ */

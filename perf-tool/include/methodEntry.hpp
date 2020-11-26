@@ -23,6 +23,8 @@
 #ifndef METHODENTRY_H_
 #define METHODENTRY_H_
 
+#include <jvmti.h>
+
 JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
             JNIEnv* env,
             jthread thread,
