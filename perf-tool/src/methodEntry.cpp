@@ -59,7 +59,10 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
         err = jvmtiEnv->Deallocate((unsigned char*)signature_ptr);
         err = jvmtiEnv->Deallocate((unsigned char*)generic_ptr);
         err = jvmtiEnv->Deallocate((unsigned char*)declaringClassName);
-
+        err = jvmtiEnv->Deallocate((unsigned char*)table_ptr);
+        if (err != JVMTI_ERROR_NONE) {
+            printf("Error expected: %d, got: %d\n", JVMTI_ERROR_NONE, err);
+        }
     
         std::string s = j.dump();
         // printf("\n%s\n", s.c_str());

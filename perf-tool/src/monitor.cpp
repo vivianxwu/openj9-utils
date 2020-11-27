@@ -90,6 +90,7 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
                 {
                     j["Method"] = methodName;
                 }
+                err = jvmtiEnv->Deallocate((unsigned char*)methodName);
             }
         }
         monitorSampleCount++;

@@ -63,6 +63,10 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
         jObj["size"] = (jint)size;
     }
 
+    err = jvmtiEnv->Deallocate((unsigned char*)classType);
+    if (err != JVMTI_ERROR_NONE) {
+        printf("Error expected: %d, got: %d\n", JVMTI_ERROR_NONE, err);
+    }
 
     /*** get information about backtrace at object allocation sites if enabled***/
     /*** retrieves method names and line numbers, and declaring class name and signature ***/
@@ -106,12 +110,17 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
             err = jvmtiEnv->Deallocate((unsigned char*)methodSignature);
             err = jvmtiEnv->Deallocate((unsigned char*)methodName);
             err = jvmtiEnv->Deallocate((unsigned char*)declaringClassName);
+            err = jvmtiEnv->Deallocate((unsigned char*)table_ptr);
+            if (err != JVMTI_ERROR_NONE) {
+                printf("Error expected: %d, got: %d\n", JVMTI_ERROR_NONE, err);
+            }
 
             jObj["objBackTrace"] = jMethods;
             jObj["objBackTraceSampleNum"] = objAllocSampleCount.load();
         }
         objAllocSampleCount++;
     }
+
 
     /*** calculate time taken in microseconds and calculate rate ***/
     auto end = steady_clock::now();
