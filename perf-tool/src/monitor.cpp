@@ -73,12 +73,12 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
     env->DeleteLocalRef(cls);
 
     if (true)
-    { // only run if the backtrace is enabled
+    { // only run if the backtrace is enabled            
+    jvmtiError err;
         if (monitorSampleCount % monitorSampleRate == 0)
         {
             jvmtiFrameInfo frames[5];
             jint count;
-            jvmtiError err;
             err = jvmtiEnv->GetStackTrace(thread, 0, 5,
                                           frames, &count);
             if (err == JVMTI_ERROR_NONE && count >= 1)
@@ -94,6 +94,7 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
             }
         }
         monitorSampleCount++;
+        err = jvmtiEnv->Deallocate((unsigned char*)str);
     } 
     sendToServer(j.dump());
 }
