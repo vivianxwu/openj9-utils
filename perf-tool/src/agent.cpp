@@ -109,13 +109,13 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
     capa.can_generate_exception_events = 1;
     capa.can_get_source_file_name = 1;
     error = jvmti->AddCapabilities(&capa);
-    check_jvmti_error(jvmti, error, "Failed to set jvmtiCapabilities.");
+    check_jvmti_error_throw(jvmti, error, "Failed to set jvmtiCapabilities.");
 
     error = jvmti->SetEventNotificationMode(JVMTI_ENABLE, JVMTI_EVENT_VM_INIT, (jthread)NULL);
-    check_jvmti_error(jvmti, error, "Unable to init VM init event.");
+    check_jvmti_error_throw(jvmti, error, "Unable to init VM init event.");
 
     error = jvmti->SetEventNotificationMode(JVMTI_ENABLE, JVMTI_EVENT_VM_DEATH, (jthread)NULL);
-    check_jvmti_error(jvmti, error, "Unable to init VM death eventVerboseLogSubscriber.");
+    check_jvmti_error_throw(jvmti, error, "Unable to init VM death eventVerboseLogSubscriber.");
 
     jvmtiEventCallbacks callbacks;
     (void)memset(&callbacks, 0, sizeof(jvmtiEventCallbacks));
@@ -126,7 +126,7 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
     callbacks.MethodEntry = &MethodEntry;
     callbacks.Exception = &Exception;
     error = jvmti->SetEventCallbacks(&callbacks, (jint)sizeof(callbacks));
-    check_jvmti_error(jvmti, error, "Cannot set jvmti callbacks");
+    check_jvmti_error_throw(jvmti, error, "Cannot set jvmti callbacks");
 
     return JNI_OK;
 }

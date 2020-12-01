@@ -62,7 +62,11 @@ JNIEXPORT void JNICALL Exception(jvmtiEnv *jvmtiEnv,
 
     /* Get method name */
     err = jvmtiEnv->GetMethodName(method, &methodName, NULL, NULL);
-    jdata["callingMethod"] = (char *)methodName;  // record calling method
+    if (err == JVMTI_ERROR_NONE) { 
+        jdata["callingMethod"] = (char *)methodName;  // record calling method
+    } else {
+        printf("GetMethodName) Error received: %d\n", err);
+    }
 
     /* Get line number */
     err = jvmtiEnv->GetLineNumberTable(method, &lineCount, &lineTable);
@@ -76,6 +80,8 @@ JNIEXPORT void JNICALL Exception(jvmtiEnv *jvmtiEnv,
             }
         }
         jdata["callingMethodLineNumber"] = lineNumber;  // record line number of calling method
+    } else {
+        printf("GetLineNumberTable) Error received: %d\n", err);
     }
 
     /* Get jclass object of calling method*/

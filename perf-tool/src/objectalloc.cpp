@@ -58,25 +58,15 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
 
     /*** get information about object ***/
     err = jvmtiEnv->GetClassSignature(object_klass, &classType, NULL);
-    if (classType != NULL && err == JVMTI_ERROR_NONE) {
+    if (classType != NULL && check_jvmti_error(jvmtiEnv, err, "Unable to retrive Object Class.\n")) {
         jObj["objType"] = classType;
         jObj["size"] = (jint)size;
-    } else {
-        printf("(GetClassSignature) Error received: %d\n", err);
     }
 
     /*** get information about backtrace at object allocation sites if enabled***/
     /*** retrieves method names and line numbers, and declaring class name and signature ***/
     if (objAllocBackTraceEnabled) {
         if (objAllocSampleCount % objAllocSampleRate == 0){
-            char *methodName;
-            char *methodSignature;
-            char *declaringClassName;
-            jclass declaring_class;
-            jint entry_count_ptr;
-            jvmtiLineNumberEntry* table_ptr;
-            jlocation start_loc_ptr;
-            jlocation end_loc_ptr;
             int numFrames = 10;
             jvmtiFrameInfo frames[numFrames];
             jint count;
@@ -84,61 +74,52 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
             // int sze = 0;
             auto jMethods = json::array();
             err = jvmtiEnv->GetStackTrace(NULL, 0, numFrames, frames, &count);
-        
-            if (err == JVMTI_ERROR_NONE && count >= 1) {
+            if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Object Stack Trace.\n") && count >= 1) {
                 for (i = 0; i < count; i++) {
+                    char *methodName;
+                    char *methodSignature;
+                    char *declaringClassName;
+                    jclass declaring_class;
+                    jint entry_count_ptr;
+                    jvmtiLineNumberEntry* table_ptr;
+                    // jlocation start_loc_ptr;
+                    // jlocation end_loc_ptr;
+
                     json jMethod;
                     jMethod["methodNum"] = i;
                     err = jvmtiEnv->GetMethodName(frames[i].method, &methodName, &methodSignature, NULL);
-                    if (err == JVMTI_ERROR_NONE) {
+                    if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Name.\n")) {
                         jMethod["methodName"] = methodName;
                         jMethod["methodSignature"] = methodSignature;
-                        err = jvmtiEnv->GetMethodDeclaringClass(frames[i].method, &declaring_class);
-                        if (err == JVMTI_ERROR_NONE) {
-                            err = jvmtiEnv->GetClassSignature(declaring_class, &declaringClassName, NULL);
-                            if (err == JVMTI_ERROR_NONE) {
-                                jMethod["methodClass"] = declaringClassName;
-                                err = jvmtiEnv->GetMethodLocation(frames[i].method, &start_loc_ptr, &end_loc_ptr);
-                                if (err == JVMTI_ERROR_NONE) {
-                                    err = jvmtiEnv->GetLineNumberTable(frames[i].method, &entry_count_ptr, &table_ptr);
-                                    if (err == JVMTI_ERROR_NONE) {
-                                        jMethod["methodLineNum"] = table_ptr->line_number;
-                                    } else {
-                                        printf("(GetLineNumberTable) Error received: %d\n", err);
-                                    }
-                                } else {
-                                    printf("(GetMethodLocation) Error received: %d\n", err);
-                                }
-                            } else {
-                                printf("GetClassSignature) Error received: %d\n", err);
-                            }
-                        } else {
-                            printf("(GetMethodDeclaringClass) Error received: %d\n", err);
-                        }
-                    } else {
-                        printf("GetMethodName) Error received: %d\n", err);
                     }
+                    err = jvmtiEnv->GetMethodDeclaringClass(frames[i].method, &declaring_class);
+                    if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Declaring Class.\n")) {
+                        err = jvmtiEnv->GetClassSignature(declaring_class, &declaringClassName, NULL);
+                        if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Declaring Class Signature.\n")) {
+                            jMethod["methodClass"] = declaringClassName;
+                        } 
+                    }
+                    // err = jvmtiEnv->GetMethodLocation(method, &start_loc_ptr, &end_loc_ptr);
+                    // if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Location.\n")) {
+                    // }
+                    err = jvmtiEnv->GetLineNumberTable(frames[i].method, &entry_count_ptr, &table_ptr);
+                    if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Line Number Table.\n")) {
+                        jMethod["methodLineNum"] = table_ptr->line_number;
+                    }
+                    
                     jMethods.push_back(jMethod);
+
+                    err = jvmtiEnv->Deallocate((unsigned char*)methodSignature);
+                    check_jvmti_error(jvmtiEnv, err, "Unable to deallocate methodSignature.\n");
+                    err = jvmtiEnv->Deallocate((unsigned char*)methodName);
+                    check_jvmti_error(jvmtiEnv, err, "Unable to deallocate methodName.\n");
+                    err = jvmtiEnv->Deallocate((unsigned char*)declaringClassName);
+                    check_jvmti_error(jvmtiEnv, err, "Unable to deallocate declaringClassName.\n");
+                    err = jvmtiEnv->Deallocate((unsigned char*)table_ptr);
+                    check_jvmti_error(jvmtiEnv, err, "Unable to deallocate table_ptr.\n");
                 }
             } 
                 
-            err = jvmtiEnv->Deallocate((unsigned char*)methodSignature);
-            if (err != JVMTI_ERROR_NONE) {
-                printf("(Deallocate methodSignature) Error received: %d\n", err);
-            }
-            err = jvmtiEnv->Deallocate((unsigned char*)methodName);
-            if (err != JVMTI_ERROR_NONE) {
-                printf("(Deallocate methodName) Error received: %d\n", err);
-            }
-            err = jvmtiEnv->Deallocate((unsigned char*)declaringClassName);
-            if (err != JVMTI_ERROR_NONE) {
-                printf("(Deallocate declaringClassName) Error received: %d\n", err);
-            }
-            err = jvmtiEnv->Deallocate((unsigned char*)table_ptr);
-            if (err != JVMTI_ERROR_NONE) {
-                printf("(Deallocate table_ptr) Error received: %d\n", err);
-            }
-
             jObj["objBackTrace"] = jMethods;
             jObj["objBackTraceSampleNum"] = objAllocSampleCount.load();
         }
@@ -153,9 +134,7 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
     jObj["objAllocRate"] = rate;
 
     err = jvmtiEnv->Deallocate((unsigned char*)classType);
-    if (err != JVMTI_ERROR_NONE) {
-        printf("(Deallocate classType) Error received: %d\n", err);
-    }
+    check_jvmti_error(jvmtiEnv, err, "Unable to deallocate classType.\n");
 
     json j;
     j["object"] = jObj; 

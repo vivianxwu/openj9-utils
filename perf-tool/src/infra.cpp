@@ -7,7 +7,7 @@
 
 Server *server;
 
-void check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str) {
+void check_jvmti_error_throw(jvmtiEnv *jvmti, jvmtiError errnum, const char *str) {
     if (errnum != JVMTI_ERROR_NONE) {
         char *errnum_str;
         errnum_str = NULL;
@@ -15,6 +15,17 @@ void check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str) {
         printf("ERROR: JVMTI: [%d] %s - %s", errnum, (errnum_str == NULL ? "Unknown": errnum_str), (str == NULL ? "" : str));
         throw "Oops!";
     }
+}
+
+bool check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str) {
+    if (errnum != JVMTI_ERROR_NONE) {
+        char *errnum_str;
+        errnum_str = NULL;
+        (void)jvmti->GetErrorName(errnum, &errnum_str);
+        printf("ERROR: JVMTI: [%d] %s - %s", errnum, (errnum_str == NULL ? "Unknown": errnum_str), (str == NULL ? "" : str));
+        return false;
+    }
+    return true;
 }
 
 jthread createNewThread(JNIEnv* jni_env){
@@ -46,7 +57,7 @@ JNIEXPORT void JNICALL VMInit(jvmtiEnv *jvmtiEnv, JNIEnv* jni_env, jthread threa
     server = new Server(portNo, commandsPath, logPath);
 
     error = jvmtiEnv -> RunAgentThread( createNewThread(jni_env),&startServer, portPointer, JVMTI_THREAD_NORM_PRIORITY );
-    check_jvmti_error(jvmtiEnv, error, "Error starting agent thread\n");
+    check_jvmti_error_throw(jvmtiEnv, error, "Error starting agent thread\n");
     printf("VM starting up\n");
 }
 
