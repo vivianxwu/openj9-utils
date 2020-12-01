@@ -33,7 +33,6 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
         jvmtiError err;
         char *name_ptr;
         char *signature_ptr;
-        char *generic_ptr;
         char *declaringClassName;
         jclass declaring_class;
         jint entry_count_ptr;
@@ -43,7 +42,7 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
 
         j["methodNum"] = mEntrySampleCount.load();
         
-        err = jvmtiEnv->GetMethodName(method, &name_ptr, &signature_ptr, &generic_ptr);
+        err = jvmtiEnv->GetMethodName(method, &name_ptr, &signature_ptr, NULL);
         if (err == JVMTI_ERROR_NONE) {
             j["methodName"] = name_ptr;
             j["methodSig"] = signature_ptr;
@@ -80,10 +79,6 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
         err = jvmtiEnv->Deallocate((unsigned char*)signature_ptr);
         if (err != JVMTI_ERROR_NONE) {
             printf("(Deallocate signature_ptr) Error received: %d\n", err);
-        }
-        err = jvmtiEnv->Deallocate((unsigned char*)generic_ptr);
-        if (err != JVMTI_ERROR_NONE) {
-            printf("(Deallocate generic_ptr) Error received: %d\n", err);
         }
         err = jvmtiEnv->Deallocate((unsigned char*)declaringClassName);
         if (err != JVMTI_ERROR_NONE) {

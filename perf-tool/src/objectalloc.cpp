@@ -102,7 +102,7 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
                                 if (err == JVMTI_ERROR_NONE) {
                                     err = jvmtiEnv->GetLineNumberTable(frames[i].method, &entry_count_ptr, &table_ptr);
                                     if (err == JVMTI_ERROR_NONE) {
-                                        jMethod["lineNum"] = table_ptr->line_number;
+                                        jMethod["methodLineNum"] = table_ptr->line_number;
                                     } else {
                                         printf("(GetLineNumberTable) Error received: %d\n", err);
                                     }
