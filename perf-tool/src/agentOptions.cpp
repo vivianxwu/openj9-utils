@@ -107,7 +107,7 @@ void modifyObjectAllocEvents(std::string function, std::string command, int samp
             capa.can_generate_vm_object_alloc_events = 1;
 
             error = jvmti->RelinquishCapabilities(&capa);
-            check_jvmti_error_(jvmti, error, "Unable to relinquish object alloc capability\n");
+            check_jvmti_error(jvmti, error, "Unable to relinquish object alloc capability\n");
 
             error = jvmti->SetEventNotificationMode(JVMTI_DISABLE, JVMTI_EVENT_VM_OBJECT_ALLOC, (jthread)NULL);
             check_jvmti_error(jvmti, error, "Unable to disable ObjectAlloc event.\n");

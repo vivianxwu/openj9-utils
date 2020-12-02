@@ -84,9 +84,9 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
         }
     }
 
-    printf("%s\n", commandsPath);
-    printf("%s\n", logPath);
-    printf("%s\n", portNo);
+    printf("%s\n", commandsPath.c_str());
+    printf("%s\n", logPath.c_str());
+    printf("%i\n", portNo);
 
     jint rest = jvm->GetEnv((void **) &jvmti, JVMTI_VERSION_1_2);
     if (rest != JNI_OK || jvmti == NULL) {
