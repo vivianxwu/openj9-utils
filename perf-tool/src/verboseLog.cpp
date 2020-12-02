@@ -58,7 +58,7 @@ void VerboseLogSubscriber::Subscribe()
 
         if (strcmp(extensionFunctions->id, COM_IBM_REGISTER_VERBOSEGC_SUBSCRIBER) == 0)
         {
-            // Found the register verbose gc subscriber function
+            /* Found the register verbose gc subscriber function */
             rc = function(jvmti_env, "verbose log subscriber", subscriberCallback, alarmCallback, NULL, &subscriptionID);
             if (rc != JVMTI_ERROR_NONE)
             {
@@ -94,7 +94,7 @@ void VerboseLogSubscriber::Unsubscribe()
 
         if (strcmp(extensionFunctions->id, COM_IBM_DEREGISTER_VERBOSEGC_SUBSCRIBER) == 0)
         {
-            // Found the deregister verbose gc subscriber function
+            /* Found the deregister verbose gc subscriber function */
             rc = function(jvmti_env, NULL, &subscriptionID);
             if (rc != JVMTI_ERROR_NONE)
             {

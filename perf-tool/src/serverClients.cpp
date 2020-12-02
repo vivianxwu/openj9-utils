@@ -81,7 +81,7 @@ void LoggingClient::closeFile(void)
         long currentPos = logFile.tellp();
         logFile.seekp(currentPos - 2);
         logFile << '\n' << "]" << endl;
-
+        
         logFile.close();
     }
 }
@@ -93,9 +93,9 @@ void LoggingClient::logData(const string message, const std::string recievedFrom
         json log;
         auto currentClockTime = std::chrono::system_clock::now();
         std::time_t currentTime = std::chrono::system_clock::to_time_t(currentClockTime);
-
-        // If message was a proper json, log as such
-        // Otherwise log the string
+        
+        /*If message was a proper json, log as such
+        * Otherwise log the string */
         try
         {
             log["body"] = log.parse(message);
@@ -104,7 +104,7 @@ void LoggingClient::logData(const string message, const std::string recievedFrom
         {
             log["body"] = message;
         }
-
+        
         log["from"] = recievedFrom;
         log["timestamp"] = currentTime;
         logFile << log.dump(2, ' ', true) << ',' << endl;

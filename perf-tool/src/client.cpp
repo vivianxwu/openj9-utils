@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "usage %s hostname port\n", argv[0]);
         exit(0);
     }
-
+    
     portno = atoi(argv[2]);
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0) {
@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
             fgets(buffer, 4096, stdin);
 
             n = write(sockfd, buffer, strlen(buffer));
-            if (n < 0){
+            if (n < 0){ 
                 error("ERROR writing to stdin");
             }
         }
@@ -116,7 +116,6 @@ int main(int argc, char *argv[])
             }
         }
     }
-
     close(sockfd);
     printf("Closed connection with server.\n");
 

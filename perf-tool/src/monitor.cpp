@@ -44,9 +44,8 @@ std::atomic<int> monitorSampleCount{0};
 
 void setMonitorStackTrace(bool val)
 {
-    // Enables or disables the stack trace option
+    /* Enables or disables the stack trace option */
     stackTraceEnabled = val;
-    return;
 }
 
 void setMonitorSampleRate(int rate)
@@ -67,21 +66,21 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
     jvmtiError error;
     static std::map<const char *, ClassCycleInfo> numContentions;
     jclass cls = env->GetObjectClass(object);
-    // First get the class object
+    /* First get the class object */
     jmethodID mid = env->GetMethodID(cls, "getClass", "()Ljava/lang/Class;");
     jobject clsObj = env->CallObjectMethod(object, mid);
-    // Now get the class object's class descriptor
+    /* Now get the class object's class descriptor */
     cls = env->GetObjectClass(clsObj);
-    // Find the getName() method on the class object
+    /* Find the getName() method on the class object */
     mid = env->GetMethodID(cls, "getName", "()Ljava/lang/String;");
-    // Call the getName() to get a jstring object back
+    /* Call the getName() to get a jstring object back */ 
     jstring strObj = (jstring)env->CallObjectMethod(clsObj, mid);
-    // Now get the c string from the java jstring object
+    /* Now get the c string from the java jstring object */
     const char *str = env->GetStringUTFChars(strObj, NULL);
     /*char *str;
     error = jvmtiEnv->GetClassSignature(cls , &str, NULL);
     if (str != NULL && error == JVMTI_ERROR_NONE) */
-    // record calling class
+    /* record calling class */
     j["Class"] = str;
 
 
@@ -89,31 +88,33 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
 
     int num = numContentions[str].numFirstTier;
     j["numTypeContentions"] = num;
-    // Release the memory pinned char array
+    /* Release the memory pinned char array */
     env->ReleaseStringUTFChars(strObj, str);
     env->DeleteLocalRef(cls);
 
     if (true)
-    { // only run if the backtrace is enabled
+    { /* only run if the backtrace is enabled */
+    jvmtiError err;
         if (monitorSampleCount % monitorSampleRate == 0)
         {
             jvmtiFrameInfo frames[5];
             jint count;
-            jvmtiError err;
             err = jvmtiEnv->GetStackTrace(thread, 0, 5,
                                           frames, &count);
-            if (err == JVMTI_ERROR_NONE && count >= 1)
-            {
+            if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Stack Trace.\n") && count >= 1) {
                 char *methodName;
                 err = jvmtiEnv->GetMethodName(frames[0].method,
                                               &methodName, NULL, NULL);
-                if (err == JVMTI_ERROR_NONE)
-                {
+                if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Name.\n")) {
                     j["Method"] = methodName;
                 }
+                err = jvmtiEnv->Deallocate((unsigned char*)methodName);
+                check_jvmti_error(jvmtiEnv, err, "Unable to deallocate methodName.\n");
             }
         }
         monitorSampleCount++;
-    }
+        err = jvmtiEnv->Deallocate((unsigned char*)str);
+        check_jvmti_error(jvmtiEnv, err, "Unable to deallocate str.\n");
+    } 
     sendToServer(j.dump());
 }

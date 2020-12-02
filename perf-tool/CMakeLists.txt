@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ###############################################################################
 # Copyright (c) 2020, 2020 IBM Corp. and others
 #
@@ -20,6 +21,8 @@
 # SPDX-License-Identifier: EPL-2.0 OR Apache-2.0 OR GPL-2.0 WITH Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 ###############################################################################
 
+=======
+>>>>>>> CANOSP
 cmake_minimum_required(VERSION 3.4)
 
 project(perf-agent)
@@ -40,4 +43,8 @@ add_library(agent SHARED ${SOURCES})
 
 add_library(utils OBJECT src/utils.cpp)
 
+<<<<<<< HEAD
 add_executable(client src/client.cpp $<TARGET_OBJECTS:utils>)
+=======
+add_executable(client src/client.cpp $<TARGET_OBJECTS:utils>)
+>>>>>>> CANOSP

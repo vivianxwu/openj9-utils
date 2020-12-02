@@ -26,7 +26,10 @@
 #include <string>
 #include <jvmti.h>
 
-void check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str);
+void check_jvmti_error_throw(jvmtiEnv *jvmti, jvmtiError errnum, const char *str);
+
+// returns False if error detected.
+bool check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str);
 
 JNIEXPORT void JNICALL VMInit(jvmtiEnv *jvmtiEnv, JNIEnv* jni_env, jthread thread);
 JNIEXPORT void JNICALL VMDeath(jvmtiEnv *jvmtiEnv, JNIEnv* jni_env);

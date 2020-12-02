@@ -29,18 +29,29 @@
 
 Server *server;
 
-void check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str) {
+void check_jvmti_error_throw(jvmtiEnv *jvmti, jvmtiError errnum, const char *str) {
     if (errnum != JVMTI_ERROR_NONE) {
         char *errnum_str;
         errnum_str = NULL;
         (void)jvmti->GetErrorName(errnum, &errnum_str);
-        printf("ERROR: JVMTI: [%d] %s - %s", errnum, (errnum_str == NULL ? "Unknown": errnum_str), (str == NULL ? "" : str));
+        printf("ERROR: JVMTI: [%d] %s - %s\n", errnum, (errnum_str == NULL ? "Unknown": errnum_str), (str == NULL ? "" : str));
         throw "Oops!";
     }
 }
 
+bool check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str) {
+    if (errnum != JVMTI_ERROR_NONE) {
+        char *errnum_str;
+        errnum_str = NULL;
+        (void)jvmti->GetErrorName(errnum, &errnum_str);
+        printf("ERROR: JVMTI: [%d] %s - %s\n", errnum, (errnum_str == NULL ? "Unknown": errnum_str), (str == NULL ? "" : str));
+        return false;
+    }
+    return true;
+}
+
 jthread createNewThread(JNIEnv* jni_env){
-    // allocates a new java thread object using JNI
+    /* allocates a new java thread object using JNI */
     jclass threadClass;
     jmethodID id;
     jthread newThread;

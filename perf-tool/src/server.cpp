@@ -141,7 +141,7 @@ void Server::handleServer()
                    ntohs(cli_addr.sin_port));
 
             // Send a welcome message
-            sendMessage(newsocketFd, "Connection to server succeeded");
+            sendMessage(newsocketFd, "Connection to server succeeded.");
 
             // Update number of active clients
             activeNetworkClients++;
@@ -208,12 +208,12 @@ void Server::sendMessage(const int socketFd, const string message)
     size_t length = message.size();
     const char *buffer = message.data();
 
-    while (total < length)
+    while (total < length) 
     {
         n = send(socketFd, buffer, strlen(buffer), 0);
-        if (n == -1)
+        if (n == -1) 
         {
-            error("ERROR sending message to clients failed");
+            error("ERROR sending message to clients failed.\n"); 
         }
 
         total += n;
@@ -247,18 +247,18 @@ void Server::shutDownServer()
     // wait on perf processing thread to join so its data can be sent before server closing
     if (perfThread.joinable())
     {
-        cout << "Waiting on perf data." << endl;
+        cout << "Waiting on perf data.\n" << endl;
         perfThread.join();
     }
 
-    handleMessagingClients("Server shutting down");
+    handleMessagingClients("Server shutting down.\n");
 
     // close off commands, logs, and network client sockets
     loggingClient->closeFile();
 
     for (int i = 0; i < activeNetworkClients; i++)
     {
-        sendMessage(networkClients[i]->getSocketFd(), "done");
+        sendMessage(networkClients[i]->getSocketFd(), "Done.\n");
         networkClients[i]->closeFd();
     }
 
@@ -269,5 +269,5 @@ void Server::shutDownServer()
 
     close(serverSocketFd);
 
-    cout << "Server shutdown." << endl;
+    cout << "Server shutdown.\n" << endl;
 }
