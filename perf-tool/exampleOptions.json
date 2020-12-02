@@ -23,12 +23,6 @@
   {
     "functionality": "objectAllocEvents",
     "command": "start",
-<<<<<<< HEAD
-    "sampleRate": 10,
-    "delay": 0
-  },
-  {
-=======
     "sampleRate": 2,
     "delay": 0
   },
@@ -44,7 +38,6 @@
     "delay": 4
   },
   {
->>>>>>> CANOSP
     "functionality": "monitorEvents",
     "command": "stop",
     "delay": 4
