@@ -49,7 +49,11 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
             jthread thread,
             jmethodID method) {
 
-    if (mEntrySampleCount % mEntrySampleRate == 0) {           
+    int numMethods;
+    /* Get number of methods and increment */
+    numMethods = atomic_fetch_add(&mEntrySampleCount, 1);
+    
+    if (numMethods % mEntrySampleRate == 0) {           
         json j;
         jvmtiError err;
         char *name_ptr;
@@ -59,7 +63,7 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
         jint entry_count_ptr;
         jvmtiLineNumberEntry* table_ptr;
 
-        j["methodNum"] = mEntrySampleCount.load();
+        j["methodNum"] = numMethods;
         
         err = jvmtiEnv->GetMethodName(method, &name_ptr, &signature_ptr, NULL);
         if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Name.\n")) {

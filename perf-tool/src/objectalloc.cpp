@@ -77,6 +77,12 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
     char *classType;
     auto start = steady_clock::now();
 
+    int numObjects;
+
+    /* Get number of objects and increment */
+    numObjects = atomic_fetch_dd(&objAllocSampleCount, 1);
+    jObj["objNum"] = numObjects;
+
     /*** get information about object ***/
     err = jvmtiEnv->GetClassSignature(object_klass, &classType, NULL);
     if (classType != NULL && check_jvmti_error(jvmtiEnv, err, "Unable to retrive Object Class.\n")) {
@@ -87,7 +93,7 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
     /*** get information about backtrace at object allocation sites if enabled***/
     /*** retrieves method names and line numbers, and declaring class name and signature ***/
     if (objAllocBackTraceEnabled) {
-        if (objAllocSampleCount % objAllocSampleRate == 0){
+        if (numObjects % objAllocSampleRate == 0){
             int numFrames = 10;
             jvmtiFrameInfo frames[numFrames];
             jint count;
@@ -136,7 +142,6 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
             } 
                 
             jObj["objBackTrace"] = jMethods;
-            jObj["objBackTraceSampleNum"] = objAllocSampleCount.load();
         }
         objAllocSampleCount++;
     }
