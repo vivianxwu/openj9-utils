@@ -80,7 +80,7 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
     int numObjects;
 
     /* Get number of objects and increment */
-    numObjects = atomic_fetch_dd(&objAllocSampleCount, 1);
+    numObjects = atomic_fetch_add(&objAllocSampleCount, 1);
     jObj["objNum"] = numObjects;
 
     /*** get information about object ***/

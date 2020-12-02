@@ -7,10 +7,10 @@
 #IncludeRegexTransform: 
 
 ../include/agentOptions.hpp
+jvmti.h
+-
 json.hpp
 ../include/json.hpp
-
-../include/exception.hpp
 
 ../include/infra.hpp
 string
@@ -342,12 +342,6 @@ utility
 vector
 -
 
-../include/methodEntry.hpp
-
-../include/monitor.hpp
-
-../include/objectalloc.hpp
-
 ../include/server.hpp
 thread
 -
@@ -368,20 +362,10 @@ unistd.h
 json.hpp
 ../include/json.hpp
 
-/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/agent.cpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/objectalloc.cpp
 jvmti.h
 -
-iostream
--
-stdio.h
--
 string.h
--
-sys/types.h
--
-thread
--
-unistd.h
 -
 agentOptions.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/agentOptions.hpp
@@ -389,16 +373,26 @@ infra.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/infra.hpp
 json.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/json.hpp
-methodEntry.hpp
-/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/methodEntry.hpp
-monitor.hpp
-/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/monitor.hpp
-objectalloc.hpp
-/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/objectalloc.hpp
 server.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/server.hpp
-exception.hpp
-/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/exception.hpp
+infra.hpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/infra.hpp
+iostream
+-
+chrono
+-
+ctime
+-
+iostream
+-
+iomanip
+-
+ctime
+-
+chrono
+-
+atomic
+-
 
 /mnt/c/CANOSP/jdk8u265-b01/include/jni.h
 stdio.h
