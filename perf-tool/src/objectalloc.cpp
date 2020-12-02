@@ -143,7 +143,7 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
                 
             jObj["objBackTrace"] = jMethods;
         }
-        objAllocSampleCount++;
+        objAllocSampleCount = atomic_fetch_add(&objAllocSampleCount, 1);
     }
 
     /*** calculate time taken in microseconds and calculate rate ***/

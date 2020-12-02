@@ -2,703 +2,1143 @@
 {
   "body": "Server started",
   "from": "Server",
-  "timestamp": 1606866930
+  "timestamp": 1606895795
 },
 {
   "body": {
     "command": "start",
-    "functionality": "exceptionEvents"
+    "delay": 0,
+    "functionality": "methodEntryEvents",
+    "sampleRate": 2000
   },
   "from": "Client",
-  "timestamp": 1606866934
+  "timestamp": 1606895800
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 1
+    "methodClass": "Ljava/io/OutputStream;",
+    "methodLineNum": 139,
+    "methodName": "flush",
+    "methodNum": 0,
+    "methodSig": "()V"
   },
   "from": "Server",
-  "timestamp": 1606866935
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 2
+    "methodClass": "Ljava/util/Formatter$Flags;",
+    "methodLineNum": 4420,
+    "methodName": "contains",
+    "methodNum": 2000,
+    "methodSig": "(Ljava/util/Formatter$Flags;)Z"
   },
   "from": "Server",
-  "timestamp": 1606866937
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 3
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 4000,
+    "methodSig": "()I"
   },
   "from": "Server",
-  "timestamp": 1606866938
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 4
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1388,
+    "methodName": "charAt",
+    "methodNum": 6000,
+    "methodSig": "(I)C"
   },
   "from": "Server",
-  "timestamp": 1606866939
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 5
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject;",
+    "methodLineNum": 1872,
+    "methodName": "doSignal",
+    "methodNum": 8000,
+    "methodSig": "(Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$Node;)V"
   },
   "from": "Server",
-  "timestamp": 1606866939
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 6
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1987,
+    "methodName": "getCharsNoBoundChecks",
+    "methodNum": 10000,
+    "methodSig": "(II[CI)V"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 7
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 12000,
+    "methodSig": "()I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 8
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 106,
+    "methodName": "<init>",
+    "methodNum": 14000,
+    "methodSig": "()V"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 9
+    "methodClass": "Ljava/lang/StringBuffer;",
+    "methodLineNum": 1200,
+    "methodName": "lengthInternalUnsynchronized",
+    "methodNum": 16000,
+    "methodSig": "()I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895801
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "BigDecimal.java",
-        "methodLineNumber": 896,
-        "methodName": "<init>"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 475,
-        "methodName": "pretty"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 503,
-        "methodName": "score"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 395,
-        "methodName": "report"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 138,
-        "methodName": "runAttempt"
-      }
-    ],
-    "callingMethod": "<init>",
-    "callingMethodLineNumber": 898,
-    "callingMethodSourceFile": "BigDecimal.java",
-    "exceptionAddress": "0xd49f0",
-    "numExceptions": 10
+    "methodClass": "Ljava/util/regex/Pattern$GroupTail;",
+    "methodLineNum": 4722,
+    "methodName": "match",
+    "methodNum": 18000,
+    "methodSig": "(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2013,
-        "methodName": "reportInterruptAfterWait"
-      },
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2034,
-        "methodName": "await"
-      },
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 402,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 287,
-        "methodName": "bumbleMain"
-      }
-    ],
-    "callingMethod": "reportInterruptAfterWait",
-    "callingMethodLineNumber": 2014,
-    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
-    "exceptionAddress": "0x72a0",
-    "numExceptions": 11
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 1200,
+    "methodName": "lengthInternal",
+    "methodNum": 20000,
+    "methodSig": "()I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2013,
-        "methodName": "reportInterruptAfterWait"
-      },
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2034,
-        "methodName": "await"
-      },
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 402,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 287,
-        "methodName": "bumbleMain"
-      }
-    ],
-    "callingMethod": "reportInterruptAfterWait",
-    "callingMethodLineNumber": 2014,
-    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
-    "exceptionAddress": "0x112900",
-    "numExceptions": 14
+    "methodClass": "Ljava/util/concurrent/locks/AbstractOwnableSynchronizer;",
+    "methodLineNum": 84,
+    "methodName": "getExclusiveOwnerThread",
+    "methodNum": 22000,
+    "methodSig": "()Ljava/lang/Thread;"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2013,
-        "methodName": "reportInterruptAfterWait"
-      },
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2034,
-        "methodName": "await"
-      },
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 402,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 287,
-        "methodName": "bumbleMain"
-      }
-    ],
-    "callingMethod": "reportInterruptAfterWait",
-    "callingMethodLineNumber": 2014,
-    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
-    "exceptionAddress": "0x12f150",
-    "numExceptions": 14
+    "methodClass": "Ljava/lang/Long;",
+    "methodLineNum": 1418,
+    "methodName": "numberOfLeadingZeros",
+    "methodNum": 24000,
+    "methodSig": "(J)I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2013,
-        "methodName": "reportInterruptAfterWait"
-      },
-      {
-        "fileName": "AbstractQueuedSynchronizer.java",
-        "methodLineNumber": 2034,
-        "methodName": "await"
-      },
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 402,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 287,
-        "methodName": "bumbleMain"
-      }
-    ],
-    "callingMethod": "reportInterruptAfterWait",
-    "callingMethodLineNumber": 2014,
-    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
-    "exceptionAddress": "0x1a5ae0",
-    "numExceptions": 16
+    "methodClass": "Ljava/text/DecimalFormat;",
+    "methodLineNum": 1952,
+    "methodName": "append",
+    "methodNum": 26000,
+    "methodSig": "(Ljava/lang/StringBuffer;Ljava/lang/String;Ljava/text/Format$FieldDelegate;[Ljava/text/FieldPosition;Ljava/text/Format$Field;)V"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 399,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 284,
-        "methodName": "bumbleMain"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 284,
-        "methodName": "invoke0"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 54,
-        "methodName": "invoke"
-      }
-    ],
-    "callingMethod": "take",
-    "callingMethodLineNumber": 407,
-    "callingMethodSourceFile": "ArrayBlockingQueue.java",
-    "exceptionAddress": "0x73d0",
-    "numExceptions": 18
+    "methodClass": "Ljava/util/regex/ASCII;",
+    "methodLineNum": 199,
+    "methodName": "getType",
+    "methodNum": 28000,
+    "methodSig": "(I)I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 399,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 284,
-        "methodName": "bumbleMain"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 284,
-        "methodName": "invoke0"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 54,
-        "methodName": "invoke"
-      }
-    ],
-    "callingMethod": "take",
-    "callingMethodLineNumber": 407,
-    "callingMethodSourceFile": "ArrayBlockingQueue.java",
-    "exceptionAddress": "0x112a30",
-    "numExceptions": 18
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 541,
+    "methodName": "getState",
+    "methodNum": 30000,
+    "methodSig": "()I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 399,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 284,
-        "methodName": "bumbleMain"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 284,
-        "methodName": "invoke0"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 54,
-        "methodName": "invoke"
-      }
-    ],
-    "callingMethod": "take",
-    "callingMethodLineNumber": 407,
-    "callingMethodSourceFile": "ArrayBlockingQueue.java",
-    "exceptionAddress": "0x12f280",
-    "numExceptions": 18
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 32000,
+    "methodSig": "()I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
   "body": {
-    "backtrace": [
-      {
-        "fileName": "ArrayBlockingQueue.java",
-        "methodLineNumber": 399,
-        "methodName": "take"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 318,
-        "methodName": "runAsWorker"
-      },
-      {
-        "fileName": "BumbleBench.java",
-        "methodLineNumber": 284,
-        "methodName": "bumbleMain"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 284,
-        "methodName": "invoke0"
-      },
-      {
-        "fileName": "NativeMethodAccessorImpl.java",
-        "methodLineNumber": 54,
-        "methodName": "invoke"
-      }
-    ],
-    "callingMethod": "take",
-    "callingMethodLineNumber": 407,
-    "callingMethodSourceFile": "ArrayBlockingQueue.java",
-    "exceptionAddress": "0x1a5c10",
-    "numExceptions": 18
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 634,
+    "methodName": "capacityInternal",
+    "methodNum": 34000,
+    "methodSig": "()I"
   },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895802
 },
 {
-  "body": "Server shutting down",
+  "body": {
+    "methodClass": "Ljava/lang/Character;",
+    "methodLineNum": 5536,
+    "methodName": "isUpperCase",
+    "methodNum": 36000,
+    "methodSig": "(I)Z"
+  },
   "from": "Server",
-  "timestamp": 1606866942
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/LockSupport;",
+    "methodLineNum": 173,
+    "methodName": "park",
+    "methodNum": 38000,
+    "methodSig": "(Ljava/lang/Object;)V"
+  },
+  "from": "Server",
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 40000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1418,
+    "methodName": "charAtInternal",
+    "methodNum": 42000,
+    "methodSig": "(I[C)C"
+  },
+  "from": "Server",
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/ConcurrentHashMap;",
+    "methodLineNum": 685,
+    "methodName": "spread",
+    "methodNum": 44000,
+    "methodSig": "(I)I"
+  },
+  "from": "Server",
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 541,
+    "methodName": "getState",
+    "methodNum": 46000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Number;",
+    "methodLineNum": 55,
+    "methodName": "<init>",
+    "methodNum": 48000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1418,
+    "methodName": "charAtInternal",
+    "methodNum": 50000,
+    "methodSig": "(I[C)C"
+  },
+  "from": "Server",
+  "timestamp": 1606895803
+},
+{
+  "body": {
+    "methodClass": "Ljava/text/NumberFormat;",
+    "methodLineNum": 760,
+    "methodName": "getMinimumFractionDigits",
+    "methodNum": 52000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 1762,
+    "methodName": "toString",
+    "methodNum": 54000,
+    "methodSig": "()Ljava/lang/String;"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Character;",
+    "methodLineNum": 4884,
+    "methodName": "codePointAt",
+    "methodNum": 56000,
+    "methodSig": "(Ljava/lang/CharSequence;I)I"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/math/BigInteger;",
+    "methodLineNum": 1100,
+    "methodName": "valueOf",
+    "methodNum": 58000,
+    "methodSig": "(J)Ljava/math/BigInteger;"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/ReentrantLock$NonfairSync;",
+    "methodLineNum": 213,
+    "methodName": "tryAcquire",
+    "methodNum": 60000,
+    "methodSig": "(I)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1418,
+    "methodName": "charAtInternal",
+    "methodNum": 62000,
+    "methodSig": "(I[C)C"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Lsun/util/locale/provider/LocaleProviderAdapter;",
+    "methodLineNum": 243,
+    "methodName": "getAdapter",
+    "methodNum": 64000,
+    "methodSig": "(Ljava/lang/Class;Ljava/util/Locale;)Lsun/util/locale/provider/LocaleProviderAdapter;"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1388,
+    "methodName": "charAt",
+    "methodNum": 66000,
+    "methodSig": "(I)C"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 541,
+    "methodName": "getState",
+    "methodNum": 68000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895804
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 70000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1652,
+    "methodName": "endsWith",
+    "methodNum": 72000,
+    "methodSig": "(Ljava/lang/String;)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/Locale;",
+    "methodLineNum": 1102,
+    "methodName": "getCountry",
+    "methodNum": 74000,
+    "methodSig": "()Ljava/lang/String;"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 566,
+    "methodName": "compareAndSetState",
+    "methodNum": 76000,
+    "methodSig": "(II)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 634,
+    "methodName": "capacityInternal",
+    "methodNum": 78000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 1200,
+    "methodName": "lengthInternal",
+    "methodNum": 80000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/regex/ASCII;",
+    "methodLineNum": 203,
+    "methodName": "isType",
+    "methodNum": 82000,
+    "methodSig": "(II)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/ReentrantLock$NonfairSync;",
+    "methodLineNum": 213,
+    "methodName": "tryAcquire",
+    "methodNum": 84000,
+    "methodSig": "(I)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 86000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895805
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 88000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Lsun/misc/FloatingDecimal$BinaryToASCIIBuffer;",
+    "methodLineNum": 789,
+    "methodName": "roundup",
+    "methodNum": 90000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Lsun/nio/cs/UTF_8;",
+    "methodLineNum": 77,
+    "methodName": "updatePositions",
+    "methodNum": 92000,
+    "methodSig": "(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/regex/Matcher;",
+    "methodLineNum": 591,
+    "methodName": "groupCount",
+    "methodNum": 94000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/ThreadLocal$ThreadLocalMap;",
+    "methodLineNum": 414,
+    "methodName": "getEntry",
+    "methodNum": 96000,
+    "methodSig": "(Ljava/lang/ThreadLocal;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry;"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 541,
+    "methodName": "getState",
+    "methodNum": 98000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuffer;",
+    "methodLineNum": 1200,
+    "methodName": "lengthInternalUnsynchronized",
+    "methodNum": 100000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1388,
+    "methodName": "charAt",
+    "methodNum": 102000,
+    "methodSig": "(I)C"
+  },
+  "from": "Server",
+  "timestamp": 1606895806
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Object;",
+    "methodLineNum": 39,
+    "methodName": "<init>",
+    "methodNum": 104000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject;",
+    "methodLineNum": 2002,
+    "methodName": "checkInterruptWhileWaiting",
+    "methodNum": 106000,
+    "methodSig": "(Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$Node;)I"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2469,
+    "methodName": "regionMatchesInternal",
+    "methodNum": 108000,
+    "methodSig": "(Ljava/lang/String;Ljava/lang/String;[C[CIII)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 1388,
+    "methodName": "charAt",
+    "methodNum": 110000,
+    "methodSig": "(I)C"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/Formatter$Flags;",
+    "methodLineNum": 4420,
+    "methodName": "contains",
+    "methodNum": 112000,
+    "methodSig": "(Ljava/util/Formatter$Flags;)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/ReentrantLock$NonfairSync;",
+    "methodLineNum": 213,
+    "methodName": "tryAcquire",
+    "methodNum": 114000,
+    "methodSig": "(I)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/math/MutableBigInteger;",
+    "methodLineNum": 638,
+    "methodName": "mulsub",
+    "methodNum": 116000,
+    "methodSig": "([I[IIII)I"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 118000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 120000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895807
+},
+{
+  "body": {
+    "methodClass": "Lnet/adoptopenjdk/bumblebench/core/MicroBench;",
+    "methodLineNum": 50,
+    "methodName": "attempt",
+    "methodNum": 122000,
+    "methodSig": "(F)F"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 124000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 126000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/regex/Matcher;",
+    "methodLineNum": 1240,
+    "methodName": "search",
+    "methodNum": 128000,
+    "methodSig": "(I)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject;",
+    "methodLineNum": 2002,
+    "methodName": "checkInterruptWhileWaiting",
+    "methodNum": 130000,
+    "methodSig": "(Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$Node;)I"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/math/BigDecimal$StringBuilderHelper;",
+    "methodLineNum": 3367,
+    "methodName": "getStringBuilder",
+    "methodNum": 132000,
+    "methodSig": "()Ljava/lang/StringBuilder;"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuffer;",
+    "methodLineNum": 634,
+    "methodName": "capacityInternal",
+    "methodNum": 134000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/regex/Matcher;",
+    "methodLineNum": 591,
+    "methodName": "groupCount",
+    "methodNum": 136000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 541,
+    "methodName": "getState",
+    "methodNum": 138000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895808
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2448,
+    "methodName": "regionMatches",
+    "methodNum": 140000,
+    "methodSig": "(ILjava/lang/String;II)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895809
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 142000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895809
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/AbstractList;",
+    "methodLineNum": 76,
+    "methodName": "<init>",
+    "methodNum": 144000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895809
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/ArrayBlockingQueue;",
+    "methodLineNum": 348,
+    "methodName": "put",
+    "methodNum": 146000,
+    "methodSig": "(Ljava/lang/Object;)V"
+  },
+  "from": "Server",
+  "timestamp": 1606895809
+},
+{
+  "body": {
+    "methodClass": "Ljava/math/MutableBigInteger;",
+    "methodLineNum": 163,
+    "methodName": "getMagnitudeArray",
+    "methodNum": 148000,
+    "methodSig": "()[I"
+  },
+  "from": "Server",
+  "timestamp": 1606895809
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Object;",
+    "methodLineNum": 39,
+    "methodName": "<init>",
+    "methodNum": 150000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895809
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Object;",
+    "methodLineNum": 119,
+    "methodName": "hashCode",
+    "methodNum": 152000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895810
+},
+{
+  "body": {
+    "methodClass": "Lsun/nio/cs/StreamEncoder;",
+    "methodLineNum": 210,
+    "methodName": "writeBytes",
+    "methodNum": 154000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895810
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Character;",
+    "methodLineNum": 4747,
+    "methodName": "isHighSurrogate",
+    "methodNum": 156000,
+    "methodSig": "(C)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895810
+},
+{
+  "body": {
+    "methodClass": "Ljava/math/BigInteger;",
+    "methodLineNum": 1051,
+    "methodName": "<init>",
+    "methodNum": 158000,
+    "methodSig": "([II)V"
+  },
+  "from": "Server",
+  "timestamp": 1606895810
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Object;",
+    "methodLineNum": 39,
+    "methodName": "<init>",
+    "methodNum": 160000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895810
+},
+{
+  "body": {
+    "methodClass": "Ljava/text/DecimalFormat;",
+    "methodLineNum": 1576,
+    "methodName": "fastFormat",
+    "methodNum": 162000,
+    "methodSig": "(D)Ljava/lang/String;"
+  },
+  "from": "Server",
+  "timestamp": 1606895810
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/ConcurrentHashMap;",
+    "methodLineNum": 755,
+    "methodName": "tabAt",
+    "methodNum": 164000,
+    "methodSig": "([Ljava/util/concurrent/ConcurrentHashMap$Node;I)Ljava/util/concurrent/ConcurrentHashMap$Node;"
+  },
+  "from": "Server",
+  "timestamp": 1606895811
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/ArrayList;",
+    "methodLineNum": 233,
+    "methodName": "ensureCapacityInternal",
+    "methodNum": 166000,
+    "methodSig": "(I)V"
+  },
+  "from": "Server",
+  "timestamp": 1606895811
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 1261,
+    "methodName": "release",
+    "methodNum": 168000,
+    "methodSig": "(I)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895811
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 363,
+    "methodName": "append",
+    "methodNum": 170000,
+    "methodSig": "(C)Ljava/lang/StringBuilder;"
+  },
+  "from": "Server",
+  "timestamp": 1606895811
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 106,
+    "methodName": "<init>",
+    "methodNum": 172000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895811
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/regex/Matcher;",
+    "methodLineNum": 591,
+    "methodName": "groupCount",
+    "methodNum": 174000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895811
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/Object;",
+    "methodLineNum": 39,
+    "methodName": "<init>",
+    "methodNum": 176000,
+    "methodSig": "()V"
+  },
+  "from": "Server",
+  "timestamp": 1606895811
+},
+{
+  "body": {
+    "methodClass": "Lnet/adoptopenjdk/bumblebench/core/BumbleBench;",
+    "methodLineNum": 501,
+    "methodName": "score",
+    "methodNum": 178000,
+    "methodSig": "(D)Ljava/lang/String;"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/text/DecimalFormat;",
+    "methodLineNum": 1576,
+    "methodName": "fastFormat",
+    "methodNum": 180000,
+    "methodSig": "(D)Ljava/lang/String;"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 182000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 541,
+    "methodName": "getState",
+    "methodNum": 184000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 186000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/Locale;",
+    "methodLineNum": 1976,
+    "methodName": "hashCode",
+    "methodNum": 188000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 190000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/ReentrantLock$Sync;",
+    "methodLineNum": 149,
+    "methodName": "tryRelease",
+    "methodNum": 192000,
+    "methodSig": "(I)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuffer;",
+    "methodLineNum": 363,
+    "methodName": "append",
+    "methodNum": 194000,
+    "methodSig": "(C)Ljava/lang/StringBuffer;"
+  },
+  "from": "Server",
+  "timestamp": 1606895812
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/regex/Pattern$BranchConn;",
+    "methodLineNum": 4582,
+    "methodName": "match",
+    "methodNum": 196000,
+    "methodSig": "(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895813
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/String;",
+    "methodLineNum": 2419,
+    "methodName": "lengthInternal",
+    "methodNum": 198000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895813
+},
+{
+  "body": {
+    "methodClass": "Ljava/lang/StringBuilder;",
+    "methodLineNum": 1200,
+    "methodName": "lengthInternal",
+    "methodNum": 200000,
+    "methodSig": "()I"
+  },
+  "from": "Server",
+  "timestamp": 1606895813
+},
+{
+  "body": {
+    "methodClass": "Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;",
+    "methodLineNum": 1261,
+    "methodName": "release",
+    "methodNum": 202000,
+    "methodSig": "(I)Z"
+  },
+  "from": "Server",
+  "timestamp": 1606895813
+},
+{
+  "body": "Server shutting down.\n",
+  "from": "Server",
+  "timestamp": 1606895813
 }
 ]

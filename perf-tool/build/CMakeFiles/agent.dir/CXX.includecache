@@ -12,6 +12,10 @@ jvmti.h
 json.hpp
 ../include/json.hpp
 
+../include/exception.hpp
+jvmti.h
+-
+
 ../include/infra.hpp
 string
 -
@@ -342,6 +346,10 @@ utility
 vector
 -
 
+../include/methodEntry.hpp
+jvmti.h
+-
+
 ../include/server.hpp
 thread
 -
@@ -362,10 +370,12 @@ unistd.h
 json.hpp
 ../include/json.hpp
 
-/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/objectalloc.cpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/exception.cpp
+atomic
+-
 jvmti.h
 -
-string.h
+string
 -
 agentOptions.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/agentOptions.hpp
@@ -373,23 +383,25 @@ infra.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/infra.hpp
 json.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/json.hpp
+exception.hpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/exception.hpp
+
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/methodEntry.cpp
+jvmti.h
+-
+string.h
+-
+agentOptions.hpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/agentOptions.hpp
+methodEntry.hpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/methodEntry.hpp
+json.hpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/json.hpp
 server.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/server.hpp
 infra.hpp
 /mnt/c/CANOSP/git/openj9-utils/perf-tool/src/infra.hpp
 iostream
--
-chrono
--
-ctime
--
-iostream
--
-iomanip
--
-ctime
--
-chrono
 -
 atomic
 -

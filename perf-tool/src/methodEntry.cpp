@@ -52,7 +52,7 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
     int numMethods;
     /* Get number of methods and increment */
     numMethods = atomic_fetch_add(&mEntrySampleCount, 1);
-    
+
     if (numMethods % mEntrySampleRate == 0) {           
         json j;
         jvmtiError err;
@@ -94,5 +94,5 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
         std::string s = j.dump();
         sendToServer(s);
     }
-    mEntrySampleCount++;
+    mEntrySampleCount = atomic_fetch_add(&mEntrySampleCount, 1);
 }
