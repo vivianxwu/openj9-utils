@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/utils.hpp
+
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/client.cpp
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+utils.hpp
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/src/utils.hpp
+string
+-
+poll.h
+-
+

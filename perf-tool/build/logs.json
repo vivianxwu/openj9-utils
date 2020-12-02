@@ -1,0 +1,704 @@
+[
+{
+  "body": "Server started",
+  "from": "Server",
+  "timestamp": 1606866930
+},
+{
+  "body": {
+    "command": "start",
+    "functionality": "exceptionEvents"
+  },
+  "from": "Client",
+  "timestamp": 1606866934
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 1
+  },
+  "from": "Server",
+  "timestamp": 1606866935
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 2
+  },
+  "from": "Server",
+  "timestamp": 1606866937
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 3
+  },
+  "from": "Server",
+  "timestamp": 1606866938
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 4
+  },
+  "from": "Server",
+  "timestamp": 1606866939
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 5
+  },
+  "from": "Server",
+  "timestamp": 1606866939
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 6
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 7
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 8
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 9
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "BigDecimal.java",
+        "methodLineNumber": 896,
+        "methodName": "<init>"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 475,
+        "methodName": "pretty"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 503,
+        "methodName": "score"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 395,
+        "methodName": "report"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 138,
+        "methodName": "runAttempt"
+      }
+    ],
+    "callingMethod": "<init>",
+    "callingMethodLineNumber": 898,
+    "callingMethodSourceFile": "BigDecimal.java",
+    "exceptionAddress": "0xd49f0",
+    "numExceptions": 10
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2013,
+        "methodName": "reportInterruptAfterWait"
+      },
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2034,
+        "methodName": "await"
+      },
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 402,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 287,
+        "methodName": "bumbleMain"
+      }
+    ],
+    "callingMethod": "reportInterruptAfterWait",
+    "callingMethodLineNumber": 2014,
+    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
+    "exceptionAddress": "0x72a0",
+    "numExceptions": 11
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2013,
+        "methodName": "reportInterruptAfterWait"
+      },
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2034,
+        "methodName": "await"
+      },
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 402,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 287,
+        "methodName": "bumbleMain"
+      }
+    ],
+    "callingMethod": "reportInterruptAfterWait",
+    "callingMethodLineNumber": 2014,
+    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
+    "exceptionAddress": "0x112900",
+    "numExceptions": 14
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2013,
+        "methodName": "reportInterruptAfterWait"
+      },
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2034,
+        "methodName": "await"
+      },
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 402,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 287,
+        "methodName": "bumbleMain"
+      }
+    ],
+    "callingMethod": "reportInterruptAfterWait",
+    "callingMethodLineNumber": 2014,
+    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
+    "exceptionAddress": "0x12f150",
+    "numExceptions": 14
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2013,
+        "methodName": "reportInterruptAfterWait"
+      },
+      {
+        "fileName": "AbstractQueuedSynchronizer.java",
+        "methodLineNumber": 2034,
+        "methodName": "await"
+      },
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 402,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 287,
+        "methodName": "bumbleMain"
+      }
+    ],
+    "callingMethod": "reportInterruptAfterWait",
+    "callingMethodLineNumber": 2014,
+    "callingMethodSourceFile": "AbstractQueuedSynchronizer.java",
+    "exceptionAddress": "0x1a5ae0",
+    "numExceptions": 16
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 399,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 284,
+        "methodName": "bumbleMain"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 284,
+        "methodName": "invoke0"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 54,
+        "methodName": "invoke"
+      }
+    ],
+    "callingMethod": "take",
+    "callingMethodLineNumber": 407,
+    "callingMethodSourceFile": "ArrayBlockingQueue.java",
+    "exceptionAddress": "0x73d0",
+    "numExceptions": 18
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 399,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 284,
+        "methodName": "bumbleMain"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 284,
+        "methodName": "invoke0"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 54,
+        "methodName": "invoke"
+      }
+    ],
+    "callingMethod": "take",
+    "callingMethodLineNumber": 407,
+    "callingMethodSourceFile": "ArrayBlockingQueue.java",
+    "exceptionAddress": "0x112a30",
+    "numExceptions": 18
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 399,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 284,
+        "methodName": "bumbleMain"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 284,
+        "methodName": "invoke0"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 54,
+        "methodName": "invoke"
+      }
+    ],
+    "callingMethod": "take",
+    "callingMethodLineNumber": 407,
+    "callingMethodSourceFile": "ArrayBlockingQueue.java",
+    "exceptionAddress": "0x12f280",
+    "numExceptions": 18
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": {
+    "backtrace": [
+      {
+        "fileName": "ArrayBlockingQueue.java",
+        "methodLineNumber": 399,
+        "methodName": "take"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 318,
+        "methodName": "runAsWorker"
+      },
+      {
+        "fileName": "BumbleBench.java",
+        "methodLineNumber": 284,
+        "methodName": "bumbleMain"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 284,
+        "methodName": "invoke0"
+      },
+      {
+        "fileName": "NativeMethodAccessorImpl.java",
+        "methodLineNumber": 54,
+        "methodName": "invoke"
+      }
+    ],
+    "callingMethod": "take",
+    "callingMethodLineNumber": 407,
+    "callingMethodSourceFile": "ArrayBlockingQueue.java",
+    "exceptionAddress": "0x1a5c10",
+    "numExceptions": 18
+  },
+  "from": "Server",
+  "timestamp": 1606866942
+},
+{
+  "body": "Server shutting down",
+  "from": "Server",
+  "timestamp": 1606866942
+}
+]

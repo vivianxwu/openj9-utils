@@ -1,0 +1,12 @@
+[
+{
+  "body": "Server started",
+  "from": "Server",
+  "timestamp": 1605719216
+},
+{
+  "body": "Server shutting down",
+  "from": "Agent",
+  "timestamp": 1605719226
+}
+]

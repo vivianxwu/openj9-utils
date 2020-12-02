@@ -1,0 +1,5 @@
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/build/CMakeFiles/edit_cache.dir
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/build/CMakeFiles/client.dir
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/build/CMakeFiles/utils.dir
+/mnt/c/CANOSP/git/openj9-utils/perf-tool/build/CMakeFiles/agent.dir
