@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
             }
 
             if (n > 0) {
-                printf("Recieved: %s\n", buffer);
+                printf("Received: %s\n", buffer);
 
                 if (std::string(buffer).substr(strlen(buffer) - 4, 4) == "done") {
                     done = true;

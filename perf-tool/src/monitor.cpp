@@ -23,9 +23,8 @@ std::atomic<int> monitorSampleCount{0};
 
 void setMonitorStackTrace(bool val)
 {
-    // Enables or disables the stack trace option
+    /* Enables or disables the stack trace option */
     stackTraceEnabled = val;
-    return;
 }
 
 void setMonitorSampleRate(int rate)
@@ -46,21 +45,21 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
     jvmtiError error;
     static std::map<const char *, ClassCycleInfo> numContentions;
     jclass cls = env->GetObjectClass(object);
-    // First get the class object
+    /* First get the class object */
     jmethodID mid = env->GetMethodID(cls, "getClass", "()Ljava/lang/Class;");
     jobject clsObj = env->CallObjectMethod(object, mid);
-    // Now get the class object's class descriptor
+    /* Now get the class object's class descriptor */
     cls = env->GetObjectClass(clsObj);
-    // Find the getName() method on the class object
+    /* Find the getName() method on the class object */
     mid = env->GetMethodID(cls, "getName", "()Ljava/lang/String;");
-    // Call the getName() to get a jstring object back
+    /* Call the getName() to get a jstring object back */ 
     jstring strObj = (jstring)env->CallObjectMethod(clsObj, mid);
-    // Now get the c string from the java jstring object
+    /* Now get the c string from the java jstring object */
     const char *str = env->GetStringUTFChars(strObj, NULL);
     /*char *str;
     error = jvmtiEnv->GetClassSignature(cls , &str, NULL);
     if (str != NULL && error == JVMTI_ERROR_NONE) */
-    // record calling class
+    /* record calling class */
     j["Class"] = str;
 
 
@@ -68,12 +67,12 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
 
     int num = numContentions[str].numFirstTier;
     j["numTypeContentions"] = num;
-    // Release the memory pinned char array
+    /* Release the memory pinned char array */
     env->ReleaseStringUTFChars(strObj, str);
     env->DeleteLocalRef(cls);
 
     if (true)
-    { // only run if the backtrace is enabled            
+    { /* only run if the backtrace is enabled */
     jvmtiError err;
         if (monitorSampleCount % monitorSampleRate == 0)
         {

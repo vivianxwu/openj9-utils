@@ -30,7 +30,7 @@ void setObjAllocBackTrace(bool val){
     return;
 }
 
-// to turn off backTrace, set sampleRate to 0
+/* to turn off backTrace, set sampleRate to 0 */
 void setObjAllocSampleRate(int rate) {
     if (rate > 0) {
         objAllocBackTraceEnabled = true;
@@ -82,9 +82,6 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
                     jclass declaring_class;
                     jint entry_count_ptr;
                     jvmtiLineNumberEntry* table_ptr;
-                    // jlocation start_loc_ptr;
-                    // jlocation end_loc_ptr;
-
                     json jMethod;
                     jMethod["methodNum"] = i;
                     err = jvmtiEnv->GetMethodName(frames[i].method, &methodName, &methodSignature, NULL);
@@ -99,9 +96,6 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
                             jMethod["methodClass"] = declaringClassName;
                         } 
                     }
-                    // err = jvmtiEnv->GetMethodLocation(method, &start_loc_ptr, &end_loc_ptr);
-                    // if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Location.\n")) {
-                    // }
                     err = jvmtiEnv->GetLineNumberTable(frames[i].method, &entry_count_ptr, &table_ptr);
                     if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Line Number Table.\n")) {
                         jMethod["methodLineNum"] = table_ptr[i].line_number;
@@ -139,7 +133,6 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
     json j;
     j["object"] = jObj; 
     std::string s = j.dump(2, ' ', true);
-    // printf("\n%s\n", s.c_str());
     sendToServer(s);
 
 }

@@ -31,10 +31,10 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
     int pos1, pos2 = 0;
     portNo = 9002;
 
-    // there is a max of two options the user can supply here
-    // "commands" is followed by a path to the commands file
-    // "log" is followed by the path to the location for the log file
-    // "portno" is followed by a number indicating the port to run the server on
+    /*** there is a max of two options the user can supply here
+     * "commands" is followed by a path to the commands file
+     * "log" is followed by the path to the location for the log file
+     * "portno" is followed by a number indicating the port to run the server on ***/
     while ((pos1 = oIn.find(optionsDelim)) != std::string::npos)
     {
         if (pos1 != std::string::npos)
@@ -84,9 +84,9 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
         }
     }
 
-    std::cout << commandsPath << std::endl;
-    std::cout << logPath << std::endl;
-    std::cout << portNo << std::endl;
+    printf("%s\n", commandsPath);
+    printf("%s\n", logPath);
+    printf("%s\n", portNo);
 
     jint rest = jvm->GetEnv((void **) &jvmti, JVMTI_VERSION_1_2);
     if (rest != JNI_OK || jvmti == NULL) {

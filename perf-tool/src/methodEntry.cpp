@@ -14,8 +14,8 @@ using json = nlohmann::json;
 std::atomic<int> mEntrySampleCount {0};
 std::atomic<int> mEntrySampleRate {1};
 
-// set sample rate according to command instructions
-// requirement: rate > 0
+/* set sample rate according to command instructions
+ * requirement: rate > 0 */
 void setMethodEntrySampleRate(int rate) {
     mEntrySampleRate = rate;
 }
@@ -37,8 +37,6 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
         jclass declaring_class;
         jint entry_count_ptr;
         jvmtiLineNumberEntry* table_ptr;
-        // jlocation start_loc_ptr;
-        // jlocation end_loc_ptr;
 
         j["methodNum"] = mEntrySampleCount.load();
         
@@ -54,10 +52,6 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
                 j["methodClass"] = declaringClassName;
             }
         }
-        // err = jvmtiEnv->GetMethodLocation(method, &start_loc_ptr, &end_loc_ptr);
-        // if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Location.\n")) {
-        //     j["start_loc"] = start_loc_ptr;
-        // }
         err = jvmtiEnv->GetLineNumberTable(method, &entry_count_ptr, &table_ptr);
         if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Line Number Table.\n")) {
             j["methodLineNum"] = table_ptr->line_number;
@@ -73,8 +67,6 @@ JNIEXPORT void JNICALL MethodEntry(jvmtiEnv *jvmtiEnv,
         check_jvmti_error(jvmtiEnv, err, "Unable to deallocate table_ptr.\n");
     
         std::string s = j.dump();
-        // printf("\n%s\n", s.c_str());
-        // printf("sample num: %i", mEntrySampleCount);
         sendToServer(s);
     }
     mEntrySampleCount++;
