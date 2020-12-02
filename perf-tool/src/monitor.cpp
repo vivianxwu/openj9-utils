@@ -81,20 +81,20 @@ JNIEXPORT void JNICALL MonitorContendedEntered(jvmtiEnv *jvmtiEnv, JNIEnv *env, 
             jint count;
             err = jvmtiEnv->GetStackTrace(thread, 0, 5,
                                           frames, &count);
-            if (err == JVMTI_ERROR_NONE && count >= 1)
-            {
+            if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Stack Trace.\n") && count >= 1) {
                 char *methodName;
                 err = jvmtiEnv->GetMethodName(frames[0].method,
                                               &methodName, NULL, NULL);
-                if (err == JVMTI_ERROR_NONE)
-                {
+                if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Name.\n")) {
                     j["Method"] = methodName;
                 }
                 err = jvmtiEnv->Deallocate((unsigned char*)methodName);
+                check_jvmti_error(jvmtiEnv, err, "Unable to deallocate methodName.\n");
             }
         }
         monitorSampleCount++;
         err = jvmtiEnv->Deallocate((unsigned char*)str);
+        check_jvmti_error(jvmtiEnv, err, "Unable to deallocate str.\n");
     } 
     sendToServer(j.dump());
 }

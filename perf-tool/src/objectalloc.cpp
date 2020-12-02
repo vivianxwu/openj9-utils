@@ -74,7 +74,7 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
             // int sze = 0;
             auto jMethods = json::array();
             err = jvmtiEnv->GetStackTrace(NULL, 0, numFrames, frames, &count);
-            if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Object Stack Trace.\n") && count >= 1) {
+            if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Stack Trace.\n") && count >= 1) {
                 for (i = 0; i < count; i++) {
                     char *methodName;
                     char *methodSignature;
@@ -104,7 +104,7 @@ JNIEXPORT void JNICALL VMObjectAlloc(jvmtiEnv *jvmtiEnv,
                     // }
                     err = jvmtiEnv->GetLineNumberTable(frames[i].method, &entry_count_ptr, &table_ptr);
                     if (check_jvmti_error(jvmtiEnv, err, "Unable to retrieve Method Line Number Table.\n")) {
-                        jMethod["methodLineNum"] = table_ptr->line_number;
+                        jMethod["methodLineNum"] = table_ptr[i].line_number;
                     }
                     
                     jMethods.push_back(jMethod);
